@@ -1,13 +1,149 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body
+{
+   background-image: linear-gradient(to right, rgb(12, 12, 12) , rgb(64, 64, 64));  
+   font-family:sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.headingg
+{
+  text-align: center;
+  color: whitesmoke;
 }
+
+.calculator-body
+{
+    background-image: linear-gradient(to right, rgb(161, 28, 28) , rgb(245, 113, 113)) ; 
+    width: 23.5rem;
+    height: 39.4rem;
+    margin: 4% auto;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 8px 10px 10px 2px rgba(46, 1, 1, 0.654);
+}
+
+.btn-part 
+{
+  display: grid;
+  grid-template-columns: repeat(4, 4.5rem);
+  grid-template-rows: minmax(5rem, auto) repeat(5, 5rem);
+  margin: 7% 0.3rem;
+  position: absolute;
+  gap: 1.4rem;
+}
+
+.btn-part .btn-special 
+{
+  background-color: rgb(177, 34, 34);
+}
+
+.btn-part > button
+{
+  font-size: 1.4rem;
+  background: none;
+	color: inherit;
+	border: none;
+  cursor: pointer;
+  box-shadow: 3px 2px 1px 2px black;
+  border-radius: 1.5rem;
+}
+
+.btn-part > button:hover
+{
+  background-color: rgb(197, 88, 97);
+  box-shadow: 3px 3px 1px 3px black;
+}
+
+.btn-part > button:focus
+{
+  background-color: rgb(116, 0, 10);
+}
+
+.calculation
+{
+  width: 25rem;
+  height: 5.5rem;
+  margin: 2% 3%;
+}
+
+.calculation span
+{
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  position: absolute;
+}
+
+@media (min-width:330px) and (max-width: 430px)  {
+
+  .calculation
+  {
+    width: 18rem;
+  }
+
+  .calculator-body
+  {
+    width: 20rem;
+    margin: 4% auto;
+  }
+
+  .btn-part 
+  {
+    grid-template-columns: repeat(4, 3.75rem);
+  }
+
+}
+
+
+@media (min-width:270px) and (max-width: 330px)  {
+
+  .calculation
+  {
+    width: 16rem;
+  }
+
+  .calculator-body
+  {
+    width: 16rem;
+    margin: 4% auto;
+  }
+
+  .btn-part 
+  {
+    grid-template-columns: repeat(4, 2.75rem);
+  }
+  .btn-part .btn-special 
+  {
+    font-size: 18px;
+  }
+
+
+}
+
+@media (min-width:200px) and (max-width: 270px)  {
+
+  .calculation
+  {
+    width: 16rem;
+  }
+
+
+  .calculator-body
+  {
+    width: 16rem;
+    margin: 4% auto;
+  }
+
+  .btn-part 
+  {
+    grid-template-columns: repeat(4, 2.5rem);
+  }
+
+  .btn-part .btn-special 
+{
+  font-size: 16px;
+}
+
+
+}
+
